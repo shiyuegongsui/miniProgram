@@ -30,7 +30,7 @@ function datetimeFormat(date, format) {
             }
             return v;
         } else if (t === 'y') {
-            return (date.getFullYear() + '').substring(4 - all.length);
+            return ((date.getFullYear() + '').substring(4 - all.length));
         }
         return all;
     });
