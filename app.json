@@ -1,4 +1,7 @@
 {
+  "usingComponents": {
+    "load-more": "/components/load-more/index"
+  },
   "pages": [
     "pages/index/index",
     "pages/logs/logs"

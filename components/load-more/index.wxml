@@ -1,0 +1,21 @@
+<view class="load-more-wrap" wx-if="{{loading && !finished}}">
+	<view class="load-content dz-flex-center">
+		<text class="weui-loading" />
+
+      <text class="loading-text">数据加载中
+</text>
+	</view>
+</view>
+
+<view class="load-more-wrap" wx-if="{{!loading && finished && length===0}}">
+	<view class="load-content dz-flex-center">
+		<text class="loading-text">暂无数据</text>
+	</view>
+</view>
+
+<view class="load-more-wrap" wx-if="{{!loading && finished && length!==0}}">
+	<view class="load-content dz-flex-center">
+		<text class="loading-text">没有更多了</text>
+	</view>
+</view>
+

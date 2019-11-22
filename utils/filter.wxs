@@ -23,7 +23,6 @@ function datetimeFormat(date, format) {
     };
     format = format.replace(getRegExp("([yMdhmsqS])+", "g"), function (all, t) {
         var v = map[t];
-        console.log(v);
         if (v !== undefined) {
             if (all.length > 1) {
                 v = '0' + v;

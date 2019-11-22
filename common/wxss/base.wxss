@@ -30,6 +30,10 @@ view, navigator {
 
 .dz-flex {
   display: flex;
+}
+
+.dz-flex-center {
+  display: flex;
   justify-content: center;
   align-items: center;
 }

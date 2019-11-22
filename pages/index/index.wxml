@@ -3,3 +3,12 @@
 
 <!-- 时间格式化 过滤器使用 -->
 <view class="container">{{filter.datetimeFormat("/Date(1493027950023)/","yyyy-MM-dd")}}</view>
+
+
+<!-- 自定义组件的使用 -->
+<load-more loading="{{loadMore.loading}}" finished="{{loadMore.finished}}" length="{{list.length}}"></load-more>
+<load-more loading="{{loadMore.finished}}" finished="{{loadMore.loading}}" length="{{list.length}}"></load-more>
+<load-more loading="{{loadMore.finished}}" finished="{{loadMore.loading}}" length="3"></load-more>
+
+
+
