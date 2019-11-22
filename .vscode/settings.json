@@ -6,6 +6,7 @@
             "savePath": null
         }
     ],
-    "liveSassCompile.settings.generateMap":false
+    "liveSassCompile.settings.generateMap":false,
+    "liveSassCompile.settings.autoprefix":null
     
 }
