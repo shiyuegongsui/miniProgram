@@ -1,0 +1,40 @@
+.border-all, .border-t, .border-r, .border-b, .border-l {
+  position: relative;
+}
+
+.border-all:after, .border-t:before, .border-r:after, .border-b:before,
+.border-l:after {
+  content: ' ';
+  position: absolute;
+  pointer-events: none;
+  box-sizing: border-box;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  border: 0 solid #eee;
+}
+
+.border-all:after {
+  border-width: 1px;
+}
+
+.border-t:before {
+  border-top-width: 1px;
+}
+
+.border-r:after {
+  border-right-width: 1px;
+}
+
+.border-b:before {
+  border-bottom-width: 1px;
+}
+
+.border-l:after {
+  border-left-width: 1px;
+}

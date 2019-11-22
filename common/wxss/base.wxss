@@ -1,0 +1,39 @@
+page {
+  box-sizing: border-box;
+  background: #f2f2f2;
+}
+
+view, navigator {
+  box-sizing: inherit;
+}
+
+.dz-nowrap {
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.dz-nowrap-multi {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.dz-imgbg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dz-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dz-flexitem-1 {
+  flex: 1;
+}
