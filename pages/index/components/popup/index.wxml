@@ -1,0 +1,4 @@
+<!--pages/index/components/popup/index.wxml-->
+<van-popup show="{{show}}" position="bottom" bind:close="cancel" >
+  e455454
+</van-popup>

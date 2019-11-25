@@ -1,7 +1,7 @@
 {
-"usingComponents": {
-  "van-tab": "/components/vant-weapp/tab/index",
-  "van-tabs": "/components/vant-weapp/tabs/index",
-  "van-popup": "/components/vant-weapp/popup/index"
-}
+  "usingComponents": {
+    "van-tab": "/components/vant-weapp/tab/index",
+    "van-tabs": "/components/vant-weapp/tabs/index",
+    "demo-popup": "./components/popup/index"
+  }
 }

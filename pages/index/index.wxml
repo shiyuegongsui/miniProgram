@@ -24,5 +24,7 @@
 </van-tabs>
 
 <button bindtap="showPop">显示弹出层</button>
-<van-popup show="{{show}}" position="bottom" bind:close="cancel" >内容</van-popup>
+<demo-popup id="myShow"></demo-popup>
 
+
+<van-dialog id="van-dialog" />
