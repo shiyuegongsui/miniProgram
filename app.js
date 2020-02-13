@@ -1,8 +1,9 @@
 //app.js
 //全局注入ajax
 
-import require from "./utils/require.js";
-wx.$ajax = require.ajax;
+import ajax from "./utils/ajax.js";
+wx.$ajax = ajax;
+
 
 import Dialog from './components/vant-weapp/dialog/dialog';
 wx.$Dialog = Dialog;

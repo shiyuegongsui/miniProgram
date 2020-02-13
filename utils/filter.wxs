@@ -1,8 +1,8 @@
 
 
-function datetimeFormat(date, format) { 
+function datetimeFormat(date, format) {
     if (typeof date == "string") {
-        date = date.replace(getRegExp("-", "g"), "\/").replace("T", " ");
+        date = date.replace(getRegExp("-", "g"), "/").replace("T", " ");
         var mts = date.match(getRegExp("\/Date\((\d+)\)\/"));
         if (mts && mts.length >= 2) {
             date = parseInt(mts[1]);
@@ -37,6 +37,74 @@ function datetimeFormat(date, format) {
     return format;
 }
 
+function priceFormat(price, isDigit) {
+
+    var nowPrice = price - 0;
+    if (nowPrice) {
+        var arr = nowPrice.toFixed(2).split(".")
+        return isDigit ? arr[1] : arr[0]
+    }
+    return nowPrice
+}
+function imgFormat(src, w, h) {
+    if (src == null || src == undefined) {
+        return "";
+    }
+    if (src.indexOf("//") < 0) {
+        src = "https://oss.fjdaze.com/" + src;
+    }
+    var imgurl = src;
+    if (w !== 0) {
+        
+        if (src.indexOf("oss.fjdaze.com") !=-1) {
+              if (h === 0) {
+                imgurl = src + "?x-oss-process=image/resize,m_lfit,w_" + w + "/format,png";
+            } else {
+                imgurl = src + "?x-oss-process=image/resize,m_fill,h_" + h + ",w_" + w + "/format,png";
+            }
+        }
+        if (src.indexOf("cbu01.alicdn.com") !=-1) {
+          imgurl = src.replace(".jpg", "." + w + "x" + h + ".jpg_.png");
+
+        }
+    }
+    return imgurl;
+}
+// 2019-12-19
+function dateFormat(value) {
+    if (!value) {
+        return ''
+    }
+    var arr = value.split("-");
+    var nowTime = getDate();
+
+    if (nowTime.getFullYear() == (arr[0] - 0)) {
+        if (((nowTime.getMonth() + 1) == (arr[1] - 0)) && (nowTime.getDate() == (arr[2] - 0))) {
+            return "今日"
+        } else {
+            return arr[1] + "月" + arr[2] + "日"
+        }
+    } else {
+        return arr[0] + "年" + arr[1] + "月" + arr[2] + "日"
+    }
+}
+function numFormat(val) {
+    var num = val - 0;
+    if (!num) {
+        return 0
+    }
+    if (num > 10000) {
+        var newNUm = (num / 10000) - 0;
+        return newNUm.toFixed(2) + "w"
+    }
+    return val;
+
+}
+
 module.exports = {
-    datetimeFormat: datetimeFormat
+    datetimeFormat: datetimeFormat,
+    priceFormat: priceFormat,
+    imgFormat: imgFormat,
+    dateFormat: dateFormat,
+    numFormat: numFormat
 }
